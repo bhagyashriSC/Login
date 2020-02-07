@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Textbox from '../../components/uiElements/Textbox.jsx';
 import Button from '../../components/uiElements/Button.jsx';
 import EmployeeList from '../../components/EmployeeList/EmployeeList.jsx';
+let loginCredential ={
+  username:"hruday@gmail.com",
+  password : "hruday123"
+ }
 class Login extends Component {
   constructor(props){
     super(props);
@@ -12,12 +16,11 @@ class Login extends Component {
       login: false,
       LoginError: false
     }
-
+ 
   }
   
   handleClick(){
-    
-    if(this.state.username === "hruday@gmail.com" && this.state.password === "hruday123"){
+    if(this.state.username === loginCredential.username && this.state.password === loginCredential.password){
       this.setState({ login: true, LoginError: false});
     }
     else{
