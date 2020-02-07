@@ -34,16 +34,17 @@ class Login extends Component {
       <>
      {this.state.LoginError ? 
     	<div className="alert alert-danger">
-      Login credentials are wrong.
+      Login credentials are wrong. Please enter valid Username and Password.
       </div>: ''}
       {!this.state.login? 
       <div className="App " id="login">
         <div className="login-card">
         <h1>Login</h1>
         <Textbox 
-        type="text"
+        type="email"
         placeholder="Enter Username Here"
-        value={ this.state.username}       
+        value={ this.state.username}     
+        errorMessage="please enter valid username"  
         onChange={(val) => {        
            this.setState({ username: val });
          
@@ -54,6 +55,7 @@ class Login extends Component {
         type="password"
         placeholder="Enter password Here"
         value={ this.state.password}
+        errorMessage="please enter valid password"  
         onChange={(val) => {         
            this.setState({ password: val });         
       }}

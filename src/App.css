@@ -34,10 +34,15 @@ body{
   width:30%;
 }
 .alert{
-  width:50%;
+  width:30%;
   margin:0px auto;
   border:3px solid #721c24;
   margin-bottom:20px;
+  text-align: center;
+}
+.alertMessage{
+  color:#f14756;
+  text-transform: capitalize;
 }
 @keyframes App-logo-spin {
   from {
